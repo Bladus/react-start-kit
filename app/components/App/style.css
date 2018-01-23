@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Play');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+html,
+body {
+    height: 100%;
+    background-color: #eeeeee;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0 auto;
+}
+.content {
+    flex: 1 0 auto;
+    background-color: #f8f8f8;
+    width: 1024px;
+    margin: 0 auto;
+    font-family: 'Roboto Condensed', sans-serif;
+}
