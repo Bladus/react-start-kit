@@ -1,0 +1,5 @@
+{
+    "alwaysWriteToDisk": true,
+    "template": "app/index.ejs",
+    "title": "start-kit"
+}

@@ -3,6 +3,8 @@
 const WEBPACK = require('webpack');
 const PATH = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const htmlConf = require('./html.config.json');
 
 const common = require('./webpack.common.js');
 
@@ -23,6 +25,7 @@ module.exports = Object.assign(common, {
             filename: 'css/styles.css', 
             disable: false, 
             allChunks: true 
-        })
+        }),
+        new HtmlWebpackPlugin(htmlConf)
     ]
 });
