@@ -1,14 +1,28 @@
 'use strict';
 
 import React from 'react';
+import SimpleForm from 'components/SimpleForm';
 
 export default class Index extends React.Component {
     constructor(props) {
         super(props);
     }
+    showResult() {
+        const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+        return async values => {
+          await sleep(500); // simulate server latency
+          window.alert(`You submitted:\n\n${JSON.stringify(values, null, 2)}`);
+        };
+    }
     render() {
         return (
-            <div>Hello startkit!</div>
+            <div>
+                <span>Hello startkit!</span>
+                <br/>
+                <br/>
+                {/*<SimpleForm onSubmit={this.showResult()} />*/}
+            </div>
         )
     }
 }

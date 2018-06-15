@@ -1,6 +1,7 @@
 'use strict';
 
 import { combineReducers } from 'redux';
+import { reducer as formReducer } from 'redux-form';
 
 function Test(state = null, action) {
     switch (action.type) {
@@ -10,5 +11,6 @@ function Test(state = null, action) {
 }
 
 export default combineReducers({
-    Test
+    Test,
+    form: formReducer
 });
