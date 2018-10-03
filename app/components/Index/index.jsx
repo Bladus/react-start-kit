@@ -1,7 +1,6 @@
 'use strict';
 
 import React from 'react';
-import SimpleForm from 'components/SimpleForm';
 
 export default class Index extends React.Component {
     constructor(props) {
@@ -19,9 +18,6 @@ export default class Index extends React.Component {
         return (
             <div>
                 <span>Hello startkit!</span>
-                <br/>
-                <br/>
-                {/*<SimpleForm onSubmit={this.showResult()} />*/}
             </div>
         )
     }
