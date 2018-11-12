@@ -1,7 +1,6 @@
 'use strict';
 
-import superagent from 'utils/superagent';
-import req from 'superagent';
+import superagent from 'superagent';
 import { dispatch } from 'redux';
 
 const error_time = 7 * 1000;
