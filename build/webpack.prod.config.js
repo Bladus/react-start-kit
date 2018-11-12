@@ -5,6 +5,7 @@ const PATH = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const htmlConf = require('./html.config.json');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const common = require('./webpack.common.js');
 
@@ -20,7 +21,7 @@ module.exports = Object.assign(common, {
                 'NODE_ENV': JSON.stringify('production')
             }
         }),
-        new WEBPACK.optimize.UglifyJsPlugin(),
+        new UglifyJsPlugin(),
         new ExtractTextPlugin({ 
             filename: 'css/styles.css', 
             disable: false, 
